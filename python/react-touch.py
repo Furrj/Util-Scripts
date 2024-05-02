@@ -16,7 +16,6 @@ if __name__ == "__main__":
         exit("Error: Incorrect number of arguments")
 
     # create folder
-    print(path)
     os.makedirs(path)
 
     # create tsx
@@ -37,3 +36,9 @@ if __name__ == "__main__":
     scss_file_content += "}"
     f.write(scss_file_content)
     f.close()
+
+    print("Created:")
+    print(".")
+    print(f"|-- {path}")
+    print(f"|   |-- {filename}.tsx")
+    print(f"|   |-- {filename}.module.scss")
