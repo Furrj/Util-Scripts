@@ -10,12 +10,14 @@ if __name__ == "__main__":
         filename = sys.argv[1]
         path = filename
     elif len(sys.argv) == 3:
+        filename = sys.argv[1]
         path = f"{sys.argv[2]}/{filename}"
     else:
         exit("Error: Incorrect number of arguments")
 
     # create folder
-    os.mkdir(path)
+    print(path)
+    os.makedirs(path)
 
     # create tsx
     f = open(f"{path}/{filename}.tsx", "w")
